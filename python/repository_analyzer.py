@@ -164,7 +164,7 @@ def _compute_health(data, commits, branches):
       - >50% merge/revert commits:          -10
       - Uncommitted modifications:          -3 each (max -15)
       - Only 1 branch with >5 commits:     -5 (suggests no branching workflow)
-    ""
+    """
     score = 100
     observations = []
 

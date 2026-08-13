@@ -13,7 +13,7 @@ namespace fs = std::filesystem;
 
 std::string PythonBridge::findPython() {
     // Try python3 first (Linux/macOS), then python (Windows/some distros)
-    for (const char* cmd : {"python2", "python"}) {
+    for (const char* cmd : {"python3", "python"}) {
         std::string check = std::string(cmd) + " --version 2>/dev/null";
         int ret = std::system(check.c_str());
         if (ret == 0) return cmd;
@@ -150,7 +150,7 @@ int PythonBridge::invoke(const std::string& repoRoot,
     int ret = std::system(cmd.c_str());
 
     // Clean up temp file
-    try { fs::remove(tmpFile); } catch (...) {}
+    //try { fs::remove(tmpFile); } catch (...) {}
 
     return ret;
 }

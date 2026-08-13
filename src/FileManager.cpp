@@ -3,7 +3,7 @@
 #include <sstream>
 #include <iomanip>
 #include <openssl/evp.h>
-
+#include <iostream>
 // --- Basic file operations ---
 
 bool FileManager::exists(const std::string& path) {

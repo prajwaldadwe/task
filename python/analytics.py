@@ -129,7 +129,6 @@ def _output_health(result):
     print(f"  Branch : {repo['active_branch']}")
     print(f"  Commits: {repo['total_commits']}")
     print(f"  Files  : {repo['tracked_files']}")
-    print("This is a bug, remove this")
 
 
 def _output_csv(result):
